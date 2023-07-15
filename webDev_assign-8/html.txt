@@ -1,0 +1,59 @@
+question-1 : Whats React and its pros and cons?
+answer : ReactJS is a component-based JavaScript library created by Facebook. React makes it easier to create interactive UI using components and efficiently manage states of those components. Multiple components can be composed together to make complex applications without losing their state in DOM.
+Pros 
+1. Component based architecture
+2. High Performance
+3. Redux
+5. Mobile App Development
+cons:
+1. High Pace of Development
+2. Flexibility and Lack of Conventions
+3. Not a full-featured framework
+4. Poor Documentation
+
+question-2 : What do you understand by Virtual Dom?
+answer: The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+
+This approach enables the declarative API of React: You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app.
+
+question-3: Difference between Virtual Dom vs Real Dom
+answer: Real DOM is what you see on your browser screen and virtual DOM is copy of it. The main difference is that when you make changes in any part of real DOM, It re-renders the whole DOM at once and that affects efficiency of your server loading cause it has to reload the whole page as browser can only read JS, Html/CSS. and JS is single threaded language. When you work with virual DOM and makes changes to any part of it, it checks the previous DOM and runs a algorithm called "differ" which performs an inspection of where changes are made and only re-renders that part of DOM and represents the changed DOM to you.
+
+question-4: Whats component? Types of component
+answer: Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+Components come in two types:
+1) Class components :A class component must include the extends React.Component statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+
+2) Function components: These are simply JavaScript functions. We can create a functional component in React by writing a JavaScript function. These functions may or may not receive data as parameters. In the functional Components, the return value is the JSX code to render to the DOM tree.
+
+question-5: Difference between class & function based component
+answer : Functional Components: Functional components are some of the more common components that will come across while working in React. These are simply JavaScript functions. We can create a functional component to React by writing a JavaScript function.
+
+Syntax:
+
+const Car=()=> {
+      return <h2>Hi, I am also a Car!</h2>;
+}
+
+Class Component: This is the bread and butter of most modern web apps built in ReactJS. These components are simple classes (made up of multiple functions that add functionality to the application).
+
+Syntax:
+
+class Car extends React.Component {
+      render() {
+        return <h2>Hi, I am a Car!</h2>;
+      }
+}
+
+question-6 :Explain react component life cycle 
+answer: Every React Component has a lifecycle of its own, lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component’s existence.
+
+1) Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+2) Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.
+3) Updating: Updating is the stage when the state of a component is updated and the application is repainted.
+4) Unmounting: As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
+
+question_7 : Explain Prop Drilling in React & Ways to avoid it
+answer: Prop drilling occurs when a parent component passes data down to its children and then those children pass the same data down to their own children. This process can continue indefinitely. At the end, it's a long chain of component dependencies that can be difficult to manage and maintain
+ways to avoid it: Prop drilling occurs when a parent component passes data down to its children and then those children pass the same data down to their own children. This process can continue indefinitely. At the end, it's a long chain of component dependencies that can be difficult to manage and maintain
